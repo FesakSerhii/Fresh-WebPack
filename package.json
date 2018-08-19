@@ -1,0 +1,35 @@
+{
+  "name": "generator-FreshWeb-bundle",
+  "version": "0.0.1",
+  "description": "Simple and light frontend bundle",
+  "homepage": "https://github.com/FesakSerhii/",
+  "repository": "https://github.com/FesakSerhii/FreshWeb-bundle",
+  "main": "generators/index.js",
+  "keywords": [
+    "yeoman-generator",
+    "Yeoman front-end generator",
+    "Front-end workflow",
+    "ES6",
+    "ES7",
+    "SASS",
+    "Pug",
+    "Mustache"
+  ],
+  "files": [
+    "generators"
+  ],
+  "author": {
+    "name": "Fesak Sergey",
+    "email": "serhiyfesak@gmail.com",
+    "url": "https://github.com/FesakSerhii"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "global": "^4.3.2",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^1.1.1",
+    "yosay": "^2.0.1"
+  }
+}
