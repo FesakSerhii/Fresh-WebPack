@@ -8,14 +8,14 @@ const fs        = require('fs');
 const yosay     = require('yosay');
 const _         = require('lodash');
 
-class VintageFrontend extends Generator {
+class FreskWebFrontend extends Generator {
 
   constructor(args, opts) {
     super(args, opts);
   }
 
   initializing() {
-    this.log('This is Vintage Bundle');
+    this.log('Это FreshWeb Bundle');
     try {
       this.username = process.env.USER || process.env.USERPROFILE.split(path.sep)[2];
     } catch (e) {
@@ -25,7 +25,7 @@ class VintageFrontend extends Generator {
 
   prompting() {
     this.log(yosay(
-      `Vintage Web Production ${chalk.yellow('vintage-frontend')} generator`
+      `FreshWeb Production ${chalk.yellow('fresh-frontend')} generator`
     ));
 
     return this.prompt([
@@ -72,16 +72,12 @@ class VintageFrontend extends Generator {
         type    : 'list',
         name    : 'templateEngine',
         message : 'Which template engine do you prefer?',
-        default : 'pug',
+        default : 'mustache',
         choices: [
           {
-            name: 'pug',
-            value: 'pug',
-            checked: true
-          },
-          {
             name: 'mustache',
-            value: 'mustache'
+            value: 'mustache',
+            checked: true
           }
         ]
       },
@@ -125,17 +121,17 @@ class VintageFrontend extends Generator {
     const template = (input, output = input) =>
       this.fs.copyTpl(this.templatePath(input), this.destinationPath(output), props);
 
-    // static files
+    // assets files
     copy('gitignore',    '.gitignore');
     copy('gulpfile.js',  'gulpfile.js');
     copy('jsdoc.json',   'jsdoc.json');
     copy('rules.jscsrc', 'rules.jscsrc');
 
-    // static files (templates)
+    // assets files (templates)
     template('README.md_t',             'README.md');
     template('package.json_t',          'package.json');
     template('webpack.config.js_t',     'webpack.config.js');
-    template('vintage-frontend.json_t', 'vintage-frontend.json');
+    template('freshweb-frontend.json_t', 'freshweb-frontend.json');
 
     // gulp config
     template('gulp/config.js', 'gulp/config.js');
@@ -160,10 +156,10 @@ class VintageFrontend extends Generator {
     template('www', 'www');
 
     // create folders for images, fonts, scripts
-    mkdirp.sync(this.destinationPath('www/static/fonts'));
-    mkdirp.sync(this.destinationPath('www/static/img'));
-    mkdirp.sync(this.destinationPath('www/static/js'));
-    mkdirp.sync(this.destinationPath('www/static/css'));
+    mkdirp.sync(this.destinationPath('www/assets/fonts'));
+    mkdirp.sync(this.destinationPath('www/assets/img'));
+    mkdirp.sync(this.destinationPath('www/assets/js'));
+    mkdirp.sync(this.destinationPath('www/assets/css'));
     mkdirp.sync(this.destinationPath('src/js/modules/dep'));
 
     // Template engine
@@ -185,8 +181,8 @@ class VintageFrontend extends Generator {
     }
 
     if (!props.isPug) {
-      mkdirp.sync(this.destinationPath('www/static/data'));
-      this.fs.writeJSON(this.destinationPath('www/static/data/combined.json'), {});
+      mkdirp.sync(this.destinationPath('www/assets/data'));
+      this.fs.writeJSON(this.destinationPath('www/assets/data/combined.json'), {});
     }
   }
 
@@ -204,4 +200,4 @@ class VintageFrontend extends Generator {
   }
 }
 
-module.exports = VintageFrontend;
+module.exports = FreskWebFrontend;

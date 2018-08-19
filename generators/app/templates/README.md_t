@@ -1,6 +1,6 @@
-# Vintage
+# Fresh
 
-Vintage start project.
+FreshWeb start project.
 
 ## Overview
 
@@ -74,7 +74,8 @@ npm run production
     |   |-- svg
     |   |-- template
     |-- www
-    |   |-- static
+    |   |-- backend
+    |   |-- assets
     |   |   |-- js
     |   |   |-- css
     |   |   |-- favicon.ico
@@ -91,12 +92,12 @@ npm run production
 ### JS
 
 Main JS entry point: `src/js/index.js`
-Will be compiled to: `www/static/js/index.js`
+Will be compiled to: `www/assets/js/index.js`
 
 ### SCSS
 
-Main SCSS entry point: `src/styles/index.scss`
-Will be compiled to: `www/static/css/index.css`
+Main SCSS entry point: `src/styles/style.scss`
+Will be compiled to: `www/assets/css/style.css`
 
 ### HTML
 

@@ -40,5 +40,5 @@ gulp.task('webpack', () => {
   return gulp.src('src/js/index.js')
     .pipe(plumber())
     .pipe(webpackStream(webpackConfig, Webpack))
-    .pipe(gulp.dest('www/static'));
+    .pipe(gulp.dest('www/assets'));
 });

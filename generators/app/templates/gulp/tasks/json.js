@@ -9,9 +9,9 @@ const config      = require('../config');
 
 /**
  * Default task for compiling and merging JSON data.
- * Compile '.json' files to 'www/static/data/'.
+ * Compile '.json' files to 'www/assets/data/'.
  */
-gulp.task('json-compile', () => compileJSON('src/template/data/**/*.json', './www/static/data/'));
+gulp.task('json-compile', () => compileJSON('src/template/data/**/*.json', './www/assets/data/'));
 
 /**
  * Watcher JSON task.
@@ -35,4 +35,4 @@ const compileJSON = (src, dest) => {
 };
 
 /** Compile on first run (development) */
-if (config.development) compileJSON('src/template/data/**/*.json', './www/static/data/');
+if (config.development) compileJSON('src/template/data/**/*.json', './www/backend/data/');

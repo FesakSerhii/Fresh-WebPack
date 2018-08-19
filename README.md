@@ -1,4 +1,4 @@
-# generator-fresh_webpack
+# generator-webpack-fresh
 
 [![NPM version][npm-image]][npm-url]
 ![][license-url]
@@ -10,18 +10,18 @@ Simple and light frontend Yeoman generator.
 ##### Install [yeoman](http://yeoman.io/):
 `npm install -g yo`
 
-##### Install [generator-fresh_webpack](https://www.npmjs.com/package/generator-fresh_webpack):
-`npm install -g generator-fresh_webpack`
+##### Install [generator-webpack-fresh](https://www.npmjs.com/package/generator-webpack-fresh):
+`npm install -g generator-webpack-fresh`
 
 > prepend with `sudo` if you are running on `*nix` OS.
 
-## Use generator-fresh_webpack ##
+## Use generator-webpack-fresh ##
 
-`yo fresh_webpack`
+`yo webpack-fresh`
 
 > Answer questions
 
-![fresh_webpack installation](http://i.imgur.com/u0QQ4cn.jpg "vintage-frontend questions")
+![webpack-fresh installation](https://i.imgur.com/hjRJbZY.png "fresh-frontend questions")
 
 Done!
 
@@ -43,6 +43,6 @@ npm run build
 
 [MIT License](https://github.com/FesakSerhii/Fresh-WebPack/blob/master/LICENSE)
 
-[npm-url]: https://www.npmjs.com/package/generator-fresh_webpack
-[npm-image]: https://badge.fury.io/js/generator-fresh_webpack.svg
+[npm-url]: https://www.npmjs.com/package/generator-webpack-fresh
+[npm-image]: https://badge.fury.io/js/generator-webpack-fresh.svg
 [license-url]: https://img.shields.io/npm/l/express.svg

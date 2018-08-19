@@ -14,11 +14,11 @@ const config      = require('../config');
  */
 const mustachePaths = config.development
   ? ['src/template/pages/*.mustache', './www/']
-  : ['src/template/**/*.mustache', './www/template'];
+  : ['src/template/**/*.mustache', './www/backend/template'];
 
 /**
  * Default HTML task.
- * Compile '.mustache' files to './www/static/template/'.
+ * Compile '.mustache' files to './www/assets/template/'.
  */
 gulp.task('template-compile', () => compileHtml(...mustachePaths));
 
@@ -40,7 +40,7 @@ gulp.task('template-watch', () => {
 const compileHtml = (src, dest) => {
   return gulp.src([src])
     .pipe(plumber(config.plumberOptions))
-    .pipe(gulpif(config.development, mustache('./www/static/data/combined.json', { extension: '.html' }, {})))
+    .pipe(gulpif(config.development, mustache('./www/assets/data/combined.json', { extension: '.html' }, {})))
     .pipe(prettify())
     .pipe(gulp.dest(dest));
 };

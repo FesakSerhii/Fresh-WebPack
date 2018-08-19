@@ -1,6 +1,6 @@
 {
-  "name": "generator-fresh_webpack",
-  "version": "0.1.4",
+  "name": "generator-webpack-fresh",
+  "version": "0.1.22",
   "description": "Simple and light frontend bundle",
   "homepage": "https://github.com/FesakSerhii",
   "repository": "https://github.com/FesakSerhii/Fresh-WebPack",

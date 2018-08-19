@@ -16,7 +16,8 @@ const config       = require('../config');
  * Compile css-preprocessor files to '.css'.
  */
 gulp.task('css-compile', () => {
-  compileCss(`src/styles/index.${config.cssPreprocessorExtension}`, './www/static/css/');
+  compileCss(`src/styles/style.${config.cssPreprocessorExtension}`, './www/assets/css/');
+  compileCss(`src/styles/static/**.${config.cssPreprocessorExtension}`, './www/assets/css/');
 });
 
 /**
@@ -112,4 +113,5 @@ function sortMediaQueries(a, b) {
 
 /** Compile on first run (development) */
 if (config.development)
-  compileCss(`src/styles/index.${config.cssPreprocessorExtension}`, './www/static/css/');
+  compileCss(`src/styles/style.${config.cssPreprocessorExtension}`, './www/assets/css/');
+  compileCss(`src/styles/static/**.${config.cssPreprocessorExtension}`, './www/assets/css/');

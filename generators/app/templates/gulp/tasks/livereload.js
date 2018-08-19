@@ -11,7 +11,7 @@ gulp.task('livereload', () => {
   browserSync.init({
     server: { baseDir: 'www' },
     reloadDebounce: 4,
-    logPrefix: 'Vintage',
+    logPrefix: 'FreshWeb.agency',
     notify: false
   });
 
