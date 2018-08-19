@@ -1,9 +1,9 @@
 {
-  "name": "generator-FreshWeb-bundle",
-  "version": "0.0.1",
+  "name": "generator-fresh_webpack",
+  "version": "0.1.4",
   "description": "Simple and light frontend bundle",
-  "homepage": "https://github.com/FesakSerhii/",
-  "repository": "https://github.com/FesakSerhii/FreshWeb-bundle",
+  "homepage": "https://github.com/FesakSerhii",
+  "repository": "https://github.com/FesakSerhii/Fresh-WebPack",
   "main": "generators/index.js",
   "keywords": [
     "yeoman-generator",
@@ -19,10 +19,17 @@
     "generators"
   ],
   "author": {
-    "name": "Fesak Sergey",
+    "name": "Fesak Sergei",
     "email": "serhiyfesak@gmail.com",
     "url": "https://github.com/FesakSerhii"
   },
+  "contributors": [
+    {
+      "name": "Fesak Sergei",
+      "email": "serhiyfesak@gmail.com",
+      "url": "https://github.com/FesakSerhii"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.3",

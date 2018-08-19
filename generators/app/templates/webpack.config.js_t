@@ -6,18 +6,18 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 
 module.exports = {
 
-  // Входная точка
+  // Entry point
   entry: {
     'js/index': './src/js/index'<% if (jquery) { %>,
     'js/index.jquery': './src/js/index.jquery'<% } %>
   },
 
-  // Настройки вывода
+  // Output settings
   output: {
     filename: '[name].js'
   },
 
-  // Плагины Webpack
+  // Webpack's plugins
   plugins: [<% if (jquery) { %>
     new webpack.optimize.CommonsChunkPlugin({
       name: 'js/index.jquery',
@@ -38,7 +38,7 @@ module.exports = {
   },
 
   module: {
-    // Настройка загрузчиков файлов - Configure file loaders
+    // Configure file loaders
     rules: [
       {
         test: /\.js$/,

@@ -1,6 +1,6 @@
-# FreshWeb
+# Vintage
 
-FreshWeb start project.
+Vintage start project.
 
 ## Overview
 
@@ -64,7 +64,7 @@ npm run production
 ## File structure
 
 ```
-|-- FreshWeb-start-project
+|-- vintage-start-project
     |-- gulp
     |   |-- config.js
     |   |-- tasks
@@ -84,7 +84,7 @@ npm run production
     |-- package.json
     |-- README.md
     |-- rules.jscsrc
-    |-- FreshWeb-frontend.json
+    |-- vintage-frontend.json
     |-- webpack.config.js
 ```
 
@@ -106,7 +106,7 @@ Will be compiled to: `www/`
 ### SVG
 
 Put your SVG-icons to: `src/svg`
-FreshWeb-workflow will create sprite and inject it into the HTML layout (on each page)
+Vintage-workflow will create sprite and inject it into the HTML layout (on each page)
 
 ## JS structure explanation
 
